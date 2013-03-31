@@ -1,0 +1,37 @@
+<h3>Mission 3.2: Hit or Stand &mdash; Booleans</h3>
+<p>
+    Excellent! Now we just need to replace <span class="variables">true</span> with something that you want to be true before you hit. First, you need to understand <em>booleans</em>. A boolean is a type of variable that is either true or false. <span class="variables">true</span> is a simple boolean.
+</p>
+<p>
+    Hitting every time isn't very useful, so now we need to use a <em>boolean expression</em>, or comparison. A boolean expression <em>returns</em> true or false based on whether the comparison being made is true or false. "Return" simply means "give the computer a value based on evaluated code." There are a few comparisons you can make between variables and numbers:
+    <ul>
+        <li>
+            === checks to see if the thing on the left equals the thing on the right. It returns true if it is and false if it isn't. (Remember, there is a difference between "===" and "=." "=" is used to assign a value to a variable. It is never used for comparisons. This is a common mistake, so do your best to avoid it!)
+        </li>
+        <li>
+            &lt; checks to see if the thing on the left is less than the thing on the right and returns true if it is and false if it isn't.
+        </li>
+        <li>
+            &gt; checks to see if the thing on the left is greater than the thing on the right.
+        </li>
+        <li>
+            &lt;= checks to see if the thing on the left is less than or equal to the thing on the right.
+        </li>
+        <li>
+            &gt;= checks to see if the thing on the left is greater than or equal to the thing on the right.
+        </li>
+    </ul>
+</p>
+<p>
+    Try replacing true with</p>
+    <div class="code">3 === 3</div>
+    <p>and press submit. Since 3 does in fact equal 3, the computer will hit! Now, replace one of the 3's with a 4 and press submit. Your player should now stand every time because 3 does not equal 4; that is, the expression returns false and so the computer skips over the if statement and straight to the else statement. Try experimenting with comparing numbers using &lt;= and other operators.
+</p>
+<p>
+    You can also compare the values of variables. Try replacing the expression inside the parentheses after if with</p>
+    <div class="code">name === "[NAME]"</div>
+    <p>The program will evaluate this as true and hit every turn! This is because you set <span class="variables">name</span> to hold "[NAME]." Instead of comparing a number to a number, you are comparing a variable to a string. Replace "[NAME]" with a different string, and it will evaluate as false and the program will stand. Try it!
+</p>
+<p>
+    There's one other cool thing you can do with boolean expressions. What if you wanted to see if something is not equal to something else? An ! means "not" in boolean expressions. So, !== checks to see if the thing on the left is NOT equal to the thing on the right and returns true if it is unequal and false if it is equal. It's the opposite of ===. Try replacing the === in the statement comparing <span class="variables">name</span> to a string that isn't your name with !==. The computer will now evaluate this statement as true and will once again hit every turn.
+</p>

@@ -1,0 +1,52 @@
+<h3>Mission 12.2: Ace as 11 or 1 &mdash; Preparing to Implement Advanced Logic</h3>
+<p>Now, on the first line inside the first else statement (the one that surrounds the code determing whether the program should hit), declare a variable that you will set to true if you have an Ace and false if you don't. Then, write an if statement that takes the value returned by the counter function you just wrote and uses it to determine whether this variable should be set to true or false.</p>
+<p>Next we need to know what the highest value (without busting) of a hand with Aces in it is. This will require writing another function that takes a parameter that is the number of Aces in the hand. Remember, we will find the highest value of the hand by subtracting 10 from the total value until the value is less than or equal to 21. You cannot subtract ten more times than the number of Aces in your hand. The function should return the highest value. Write this function. Set its value to a variable below where you set a variable for the number of Aces in the hand.</p>
+<p>Again, you'll have to check your code against <a show="hidden-1">ours</a>. You'll get to run everything in the next section!</p>
+<!-- when they click "ours," check off the objectives but don't flash the objective complete notification. enable the continue button.-->
+
+<div class="hiddencode" id="hidden-1">
+//earlier code
+
+else {	
+	var haveAce = false; //initialize variable to false
+	var numberOfAces = aceCount(handValue); //counts Aces in your hand
+    var highValue = highestValue(numberOfAces);
+	if(numberOfAces &gt; 0){ //if there's an Ace
+		haveAce = true; //set variable to true
+	}
+	//otherwise variable will remain false
+	
+	if(dealerUpCard() &lt; 7 &amp;&amp; (totalValue() === 10 || totalValue() === 11)){
+		doubleDown();
+	}
+    
+    /*The following else statement is broken up onto two lines because it is so long.
+    Remember, the computer doesn't care what line code is on.*/
+	else if((totalValue() &lt; 17 &amp;&amp; dealerUpCard() &gt; 6) || 
+    	(dealerUpCard() &lt;= 6 &amp;&amp; totalValue() &lt; 12)){  
+		hit();
+	}
+	else{
+		stand();
+	}
+}
+
+//find the highest value of a hand with Aces that does not bust
+function highestValue(aces){
+	var highVal = totalValue(); //start with counting Aces as 11
+    var counter = 0;
+	for(counter = 1; counter &lt;= aces; counter++){ /*to ensure that 10 won't be 
+    													subtracted more times than 
+                                                        the number of Aces*/
+		if(highVal &gt; 21){ 
+			highVal -= 10; //count Ace as a 1
+		}
+	}
+	return highVal; /*Notice that if there are no Aces in the hand, this 
+    						will return the same thing as totalValue(). If there 
+                            are not enough Aces, it will return a number
+							greater than 21 and you will bust.*/
+}
+
+//later code
+</div>

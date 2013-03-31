@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>JSJack Home</title>
+        <link rel="shortcut icon" href="./favicon.ico" />
+
+<link href="./styles/reset.css" rel="stylesheet" type="text/css" />
+<link href="./styles/edugame.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="./scripts/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="./scripts/json2.min.js"></script>
+<script type="text/javascript" src="./scripts/jquery-linedtextarea.js"></script>
+<script type="text/javascript" src="./scripts/jquery.hash.min.js"></script>
+<script type="text/javascript" src="./scripts/jquery.cookie.js"></script>
+<script type="text/javascript" src="./scripts/cards.js"></script>
+<script type="text/javascript" src="./scripts/cb.js"></script>
+<script type="text/javascript" src="./scripts/rem.js"></script>
+<script type="text/javascript" src="./scripts/les.js"></script>
+<script type="text/javascript" src="./scripts/eg.js"></script>
+<script type="text/javascript" src="./scripts/ui.js"></script>
+<script type="text/javascript" src="./scripts/uf.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    if (location.search.indexOf('curtain') != -1) {
+        $("body").css({overflow:'hidden'});
+        $("#curtains").show();
+    }
+});
+</script>
+<style type="text/css">
+body {
+}
+.power {
+	float: left;
+	background-image:url(img/Splash%20Power.png);
+	width: 233px;
+	height: 41px;
+}
+.background {
+	clear:left;
+	float:left;
+	background-image:url(img/SplashMain.png);
+	width:800px; 
+	height:762px;
+}
+.midbutton {
+	clear: right;
+	float: right;
+	width: 290px;
+	height: 89px;
+	margin-top: 5px;
+	cursor: pointer;
+}
+.midbutton:hover {
+	background-position: 0 89px;
+}
+.miniwrapper {
+	position: absolute;
+	top: 450px;
+}
+.inner {
+	width: 630px;
+	margin-left: 85px;
+}
+.boxes {
+	position: relative;
+	background-image:url(img/SplashBottom.png);
+	width: 649px;
+	height: 336px;
+}
+.moreinfo {
+	position:absolute;
+	top: 153px;
+	right: 60px;
+	background-image:url(img/SplashMoreInfo.png);
+	height: 133px;
+	width: 211px;
+}
+.moreinfo:hover {
+	background-position: 0 133px;
+}
+</style>
+</head>
+	
+<body>
+<div class="wrapper">
+    <div id="curtains">
+            <div id="bleft">
+                <img src="./img/curtainsLeft.jpg" id="cleft" />
+            </div>
+            <div id="bright">
+                <img src="./img/curtainsRight.jpg" id="cright" />
+            </div>
+        </div>
+    <div id="header">
+    <a class="logo" href="./"></a>
+    
+    <div class="links">
+    <ul>
+        <li> <a href="./lessons/glossary.htm" target="_blank"> <div class="glossary"> </div> </a> <li>
+        <li> <a href="./allLessons" target="_blank"> <div class="lessons"> </div> </a> <li>
+        <li> <a href="./about.htm"> <div class="about"> </div> </a> <li>
+        <li> <a href="javascript:void(window.open('./commentForm.html','_blank','height=600,width=600,menubar=no,location=no'));"> <div class="feedback"> </div> </a> <li>
+    </div>
+    
+    <div id="account">
+      <p id="username"> <a href="javascript:void(0);" id="accBig">Login</a> </p>
+      <p id="logout"><a href="javascript:void(0);" id="accSmall">Logout</a></p>
+    </div>
+
+</div>
+    <div class="power"> </div>
+    <div class="background"> 
+        <div style="float:right; height: 39px;"> </div>
+        <a href="javascript:void(0)" id="linkLogin" class="midbutton" style="background-image:url(img/MainPageSignUP.png);"> </a>
+        <a href="./game.htm" id="linkPlay" class="midbutton" style="background-image:url(img/MainPagePlayPerfectly.png);"> </a>
+        <a href="https://www.facebook.com/pages/JSJack/149335031851081?sk=wall" id="linkFb" class="midbutton" style="background-image:url(img/MainPageMidLearnCode.png);"> </a>
+    </div>
+    
+    <div class="miniwrapper">
+    <div class="inner">
+        <div class="boxes">
+            <a href="./about.htm" class="moreinfo"> </a>
+        </div>
+    </div>
+    </div>
+</div>
+<div style="clear:both;">
+	<div id="bottomRibbon"> </div>
+</div>
+</body>
+</html>

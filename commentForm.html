@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>JSJack Feedback</title>
+        <link href="./styles/reset.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="./scripts/jquery-1.7.1.min.js"></script>
+        <style type="text/css">
+            html {
+                height: 100%;
+            }
+            body {
+                background-color: #333;
+                color: #111;
+                font-family: Arial, sans-serif;
+                font-size: 13px;
+                height: 100%;
+            }
+            .wrapper {
+                width: 400px;
+                margin: 0px auto 0px auto;
+                background-color: #fff;
+                height: 100%;
+            }
+            .padded {
+                padding: 5px;
+            }
+            .logo {
+                background-image: url(./img/logo.png);
+                height: 40px;
+                width: 134px;
+            }
+            label {
+                width: 80px;
+                display: block;
+                float: left;
+                padding: 5px;
+            }
+            h4 {
+                font-weight: bold;
+                margin: 1em;
+                text-align:left;
+            }
+            li {
+                vertical-align: top;
+                margin: 5px;
+                padding: 5px;
+            }
+            .text {
+                width: 250px;
+                border: 1px solid #666666;
+                font-family: Arial, sans-serif;
+            }
+            
+            textarea {
+                height: 100px;
+            }
+            #submit {
+                width: 80px;
+            }
+        </style>
+        <script type="text/javascript">
+        $(document).ready(function() {
+            $(".text").focus(function() {
+                $(this).parent().css({backgroundColor:"#ffff99"});
+            });
+            $(".text").blur(function() {
+                $(this).parent().css({backgroundColor:"#ffffff"});
+            });
+            $("#name").focus();
+            $("li").click(function() {
+                $(this).children("input").focus();
+                $(this).children("textarea").focus();
+            });
+        });
+        </script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="padded">
+            <div class="logo"></div>
+            <h4>Your feedback is greatly appreciated!</h4>
+            <form action="/adminemailer" method="post">
+                <ul>
+                    <li>
+                        <label for="name">Your name</label>
+                        <input type="text" name="name" class="text" id="name" />
+                    </li>
+                    <li>
+                        <label for="email">Your email</label>
+                        <input type="text" name="email" class="text" />
+                    </li>
+                    <li>
+                        <label for="email">Comments</label>
+                        <textarea name="comment" class="text"></textarea>
+                    </li>
+                    <li style="text-align:center;">
+                        <input type="submit" value="Send!" id="submit" />
+                    </li>
+                </ul>
+            </form>
+            </div>
+        </div>
+    </body>
+</html>

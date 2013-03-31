@@ -1,0 +1,32 @@
+<h3>Mission 5: Organize Your Code &mdash; Comments on Commenting</h3>
+<p>Well, it looks like you're well on your way to becoming a professional Blackjack programmer, [NAME]! But your code is getting a bit complicated. It's very important to remember what each part of your code does in case you need to edit it later. Fortunately, you can <em>comment</em> it. Comments are notes in your code that the computer ignores. You can type anything you want in comments without worrying about the computer doing something weird.</p>
+<p>Commenting is extremely important when you are working in groups; no one wants to trawl through code just to understand what a function does. As not commenting may incite the wrath of angry programmers, you'll always want to comment.</p>
+<p>There are two types of comment notation in JavaScript. The first is a single line comment. It is written like this</p>
+<div class="code">//type your comment here</div>
+<p>Anything on the line after the two slashes will be skipped over by the computer. This can be used for adding notes or for "commenting out" lines of code that you want the computer to skip.</p>
+<p>You can also put a comment on a line after a piece of code. For example,</p>
+<div class="code">function totalValue(){ //type your comment here</div>
+<p>The computer will still see the function declaration because it is before the // but will not see the comment. This is very useful for adding notes about what a line does.</p>
+<p>The other type of comment is a multiline comment. It begins with /* and ends with */ For example,</p>
+<div class="code">/* part 1 of comment
+part two of comment
+part three of comment */</div>
+<p>The computer will skip over all three of those lines!</p>
+<p>Add some comments to your code to remind yourself what's happening at each step, and then hit submit. Nothing different should happen!</p>
+<p>To see some commenting suggestions, click <a show="hidden-1">here</a>.</p>
+<div class="hiddencode" id="hidden-1">var name = "[NAME]"; //tell computer your name
+
+/*
+Function to find total value of both cards
+Returns an integer that is the total value of both cards
+*/
+function totalValue(){
+       return handValue[0] + handValue[1];
+}
+
+if(totalValue() &lt; 17){ //if the total value of both your cards is less than 17
+       hit();
+}
+else{
+       stand();
+}</div>

@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>JSJack</title>
+        <link rel="shortcut icon" href="./favicon.ico" />
+        <link href="./styles/reset.css" rel="stylesheet" type="text/css" />
+        <link href="./styles/edugame.css" rel="stylesheet" type="text/css" />
+        <link href="./styles/jquery-linedtextarea.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="./scripts/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="./scripts/json2.min.js"></script>
+        <script type="text/javascript" src="./scripts/jquery-linedtextarea.js"></script>
+        <script type="text/javascript" src="./scripts/jquery.hash.min.js"></script>
+        <script type="text/javascript" src="./scripts/jquery.cookie.js"></script>
+        <script type="text/javascript" src="./scripts/cards.js"></script>
+        <script type="text/javascript" src="./scripts/cb.js"></script>
+        <script type="text/javascript" src="./scripts/rem.js"></script>
+        <script type="text/javascript" src="./scripts/les.js"></script>
+        <script type="text/javascript" src="./scripts/eg.js"></script>
+        <script type="text/javascript" src="./scripts/ui.js"></script>
+        <script type="text/javascript" src="./scripts/uf.js"></script>
+    </head>
+    <body id="game">
+        <img src="./img/holycow.png" alt="Holy cow" id="holycow" />
+        <div id="notification">
+            <h2 id="lessonNumberForThisNotification">1</h2>
+            <ul id="whyAreTheseIdsSoEffingLong">
+                <li id="objectiveThatIsComplete">
+                    Obtain the Chartreuse Stork of the +5 Teapots
+                </li>
+            </ul>
+        </div>
+       <!-- <div class="wrapper">
+            <div id="account">
+                <span id="accName"></span>
+                <a href="javascript:void(0);"></a>
+                <a href="javascript:void(0);" id="log"></a>
+            </div>
+            <div id="titlebar">
+                <div id="logo"> </div>
+            </div>
+        </div>
+        <div id="navbar" class="wrapper">
+            <div id="gameTitle">
+                <img src="./img/blackjackTitle.png" alt="Blackjack" />
+            </div>
+            <div id="backButton">
+                <a href="javascript:void(window.open('./lessons/glossary.htm'));"><img src="./img/glossary.png" alt="Back to Games" /></a>
+            </div>
+        </div>-->
+        <div id="header">
+    <a class="logo" href="./"></a>
+    
+    <div class="links">
+    <ul>
+        <li> <a href="./lessons/glossary.htm" target="_blank"> <div class="glossary"> </div> </a> <li>
+        <li> <a href="./allLessons" target="_blank"> <div class="lessons"> </div> </a> <li>
+        <li> <a href="./about.htm"> <div class="about"> </div> </a> <li>
+        <li> <a href="javascript:void(window.open('./commentForm.html','_blank','height=600,width=600,menubar=no,location=no'));"> <div class="feedback"> </div> </a> </li>
+    </div>
+    
+    <div id="account">
+      <p id="username"> <a href="javascript:void(0);" id="accBig">Login</a> </p>
+      <p id="logout"><a href="javascript:void(0);" id="accSmall">Logout</a></p>
+    </div>
+
+</div>
+<div id="line">
+</div>
+        <div id="graybar">
+            <div class="wrapper">
+                <div id="sidebarwrap">
+                    <div id="sidebar">
+                        <div id="directions">
+                            <div id="directionsLabel">
+                                <img src="./img/larr.png" alt="&gt;" id="toggleIns" />
+                                <img src="./img/directionsLabel.png" alt="Directions" style="" />
+                            </div>
+                        </div>
+                        <div id="instructions"></div>
+                        <div id="continueBox">
+                            <div id="previousButton"></div>
+                            <div id="continueButton"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="output">
+                    <div class="spacer">
+                        <div id="moneybox">
+                            <span id="betbox"></span>
+                            <span id="resetMoneyBox">
+                                <input type="button" id="resetMoney" value="Reset Money" />
+                            </span>
+                            <span id="money"></span>
+                        </div>
+                        <div id="gameOut"></div>
+                        <div class="playerLabel" style="clear:both">
+                            Dealer
+                        </div>
+                        <table id="display"></table>
+                        <div class="playerLabel" id="playerName">
+                            You
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div id="buttons" style="text-align:center"></div>
+            <div id="codePane">
+                <div id="code">
+                    <textarea class="codebox" id="codebox" spellcheck="false"></textarea>
+                </div>
+                <div id="bottomBar">
+                    <img src="./img/submit.png" id="submit" alt="Submit" />
+                    <div id="debugWrap">
+                        <div id="debug"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="bottomRibbon"></div>
+        <script type="text/javascript">
+            $(function() {
+                $(".codebox").linedtextarea({
+                    selectedLine : 1
+                });
+            });
+
+        </script>
+    </body>
+</html>
